@@ -27,6 +27,8 @@
         <activity android:name=".activity.DialogActivity"
             android:theme="@style/Theme.AppCompat.Dialog"
             ></activity>
+        <activity android:name=".activity.AlertDialogActivity"/>
+        <activity android:name=".activity.ListActivity"/>
     </application>
 
 </manifest>

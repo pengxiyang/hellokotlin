@@ -5,16 +5,19 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.test.hellokotlin.R
 import com.test.hellokotlin.databinding.ActivitySecondBinding
+import com.test.hellokotlin.doSomething
+import com.test.hellokotlin.jump2AlertDialogActivity
 
 /**
  *  created by pxy on 2021/4/22
  *
  */
-class SecondActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity(), View.OnClickListener {
     private val TAG = "---SecondActivity"
     private lateinit var binding: ActivitySecondBinding
     companion object{
@@ -23,7 +26,6 @@ class SecondActivity : AppCompatActivity() {
             intent.putExtra("param1",data1)
             intent.putExtra("param2",data2)
             cotext.startActivity(intent)
-
         }
     }
 
@@ -33,10 +35,37 @@ class SecondActivity : AppCompatActivity() {
         Log.e(TAG, "onCreate: " )
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.bt.setOnClickListener {
-            Toast.makeText(this,"123",Toast.LENGTH_SHORT).show()
-        }
+        binding.bt.setOnClickListener(this)
+        binding.tv.setOnClickListener(this)
+       /* binding.bt.setOnClickListener {
+
+        }*/
+        doSomething()
     }
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.bt_jump->{
+
+            }
+            R.id.bt->{
+              //  Toast.makeText(this,"1",Toast.LENGTH_SHORT).show()
+                if(binding.progressCircular.visibility == View.VISIBLE){
+                    binding.progressCircular.visibility =View.GONE
+
+                }else{
+                    binding.progressCircular.visibility =View.VISIBLE
+                }
+            }
+            R.id.tv->{
+               binding.progressHorizontal.progress=binding.progressHorizontal.progress+10
+            }
+
+        }
+
+    }
+
+
+
     override fun onStart() {
         super.onStart()
         Log.e(TAG, "onStart: " )
@@ -67,4 +96,5 @@ class SecondActivity : AppCompatActivity() {
         super.onDestroy()
         Log.e(TAG, "onDestroy: " )
     }
+
 }

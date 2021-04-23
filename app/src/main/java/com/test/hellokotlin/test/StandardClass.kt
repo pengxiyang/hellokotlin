@@ -27,6 +27,7 @@ class StandardClass {
      *   val result = with(obj){
          //这里obj时上下文
          "value" //with函数的返回值}
+     调用with 函数并传入StringBuilder对象
      *
      */
     fun test1(){
@@ -51,6 +52,8 @@ class StandardClass {
      * run 函数
      *
      * val result =obj.run{//这里是obj的上下文 ，"value"  run函数的返回值   }
+     * 和with一样 会使用Lambda表达式的最后一行代码作为返回值返回
+     * 调用StringBuilder的run方法
      */
     fun  test2(){
         val  result =StringBuilder().run {
@@ -67,6 +70,8 @@ class StandardClass {
 
     /**
      * apply
+     * val result =obj.apply{//这里是obj的上下文 }  //result =obj
+     * apply函数无法指定返回值，只能返回调用对象本身，
      */
     fun test3(){
        val  result =StringBuilder().apply {

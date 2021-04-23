@@ -1,6 +1,5 @@
 package com.test.hellokotlin
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -22,15 +21,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ActivityCollector.addActivity(this)
-        binding.text.setOnClickListener {
-           SecondActivity.actionStart(this,"","")
-        }
+        supportActionBar?.hide()//隐藏系统自带标题栏
         binding.bt.setOnClickListener {
+           //SecondActivity.actionStart(this,"","")
+            StartActivityUtils.actionStart(this,"","")
+        }
+        binding.text.setOnClickListener {
             jump2DialogActivity()
         }
+        binding.bt1.setOnClickListener {
+            jump2AlertDialogActivity(this)
+        }
+        binding.bt2.setOnClickListener {
+            jump2ListActivity(this)
+        }
     }
-
-
     /**
      * 显示intent
      */

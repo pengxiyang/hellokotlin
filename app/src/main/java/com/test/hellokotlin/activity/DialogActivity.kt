@@ -16,7 +16,6 @@ class DialogActivity :AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityDialogBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
     }
     override fun onStart() {
         super.onStart()

@@ -35,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         binding.bt2.setOnClickListener {
             jump2ListActivity(this)
         }
+        binding.btMap.setOnClickListener {
+            jump2MapTabActivity(this)
+        }
     }
     /**
      * 显示intent

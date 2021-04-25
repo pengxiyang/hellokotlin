@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.test.hellokotlin">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
 
     <application
         android:allowBackup="true"
@@ -29,6 +35,9 @@
             ></activity>
         <activity android:name=".activity.AlertDialogActivity"/>
         <activity android:name=".activity.ListActivity"/>
+        <activity android:name=".activity.MapTabActivity"/>
+        <activity android:name=".activity.MapActivity"
+            />
     </application>
 
 </manifest>

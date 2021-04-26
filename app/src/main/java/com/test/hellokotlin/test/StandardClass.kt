@@ -40,14 +40,8 @@ class StandardClass {
             toString()
 
         }
-
         println(result)
-
     }
-
-
-
-
     /**
      * run 函数
      *

@@ -29,11 +29,14 @@ class MainActivity : AppCompatActivity() {
         binding.text.setOnClickListener {
             jump2DialogActivity()
         }
-        binding.bt1.setOnClickListener {
+        binding.btDialog.setOnClickListener {
             jump2AlertDialogActivity(this)
         }
-        binding.bt2.setOnClickListener {
+        binding.btListview.setOnClickListener {
             jump2ListActivity(this)
+        }
+        binding.btRv.setOnClickListener {
+            jump2RecyclerViewActivity(this)
         }
         binding.btMap.setOnClickListener {
             jump2MapTabActivity(this)

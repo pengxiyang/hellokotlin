@@ -1,12 +1,8 @@
 package com.test.hellokotlin
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import com.test.hellokotlin.activity.AlertDialogActivity
-import com.test.hellokotlin.activity.ListActivity
-import com.test.hellokotlin.activity.MapActivity
-import com.test.hellokotlin.activity.MapTabActivity
+import com.test.hellokotlin.activity.*
 
 
 /**
@@ -25,7 +21,7 @@ fun  jump2AlertDialogActivity(context:Context){
 }
 
 fun  jump2ListActivity(context: Context){
-   context.startActivity(Intent(context,ListActivity::class.java))
+   context.startActivity(Intent(context,ListViewActivity::class.java))
 }
 
 fun  jump2MapTabActivity(context: Context){
@@ -34,5 +30,10 @@ fun  jump2MapTabActivity(context: Context){
 
 fun jump2MapActivity(context: Context){
     context.startActivity(Intent(context,MapActivity::class.java))
+
+}
+
+fun  jump2RecyclerViewActivity(context: Context){
+    context.startActivity(Intent(context,RecyclerViewActivity::class.java))
 
 }

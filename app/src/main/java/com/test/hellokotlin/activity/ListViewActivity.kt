@@ -2,6 +2,7 @@ package com.test.hellokotlin.activity
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.test.hellokotlin.R
 import com.test.hellokotlin.adapter.FruitAdapter
@@ -12,7 +13,7 @@ import com.test.hellokotlin.databinding.ActivityListViewBinding
  *  created by pxy on 2021/4/23
  *
  */
-class ListActivity:AppCompatActivity() {
+class ListViewActivity:AppCompatActivity() {
     private lateinit var  binding: ActivityListViewBinding
     private val  data= listOf("apple","banana","orange","watermelon","pear","grape","pineapple","strawberry","cherry","mango","apple","pear")
     val  fruitList =ArrayList<Fruit>()
@@ -25,6 +26,10 @@ class ListActivity:AppCompatActivity() {
     //    val  adapter =ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data)
         val adapter =FruitAdapter(this,R.layout.item_fruit,fruitList)
         binding.listView.adapter =adapter
+        binding.listView.setOnItemClickListener{parent, view, position, id ->
+            val  fruit =fruitList[position]
+            Toast.makeText(this,fruit.name,Toast.LENGTH_SHORT).show()
+        }
     }
 
    private fun initFruits(){

@@ -35,6 +35,7 @@ import kotlin.math.roundToInt
  *
  */
 class MapActivity : AppCompatActivity() {
+
     private val binding: ActivityMapBinding by lazy {
         ActivityMapBinding.inflate(layoutInflater)
     }

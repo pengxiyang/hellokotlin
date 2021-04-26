@@ -34,10 +34,12 @@
             android:theme="@style/Theme.AppCompat.Dialog"
             ></activity>
         <activity android:name=".activity.AlertDialogActivity"/>
-        <activity android:name=".activity.ListActivity"/>
+        <activity android:name=".activity.ListViewActivity"/>
         <activity android:name=".activity.MapTabActivity"/>
         <activity android:name=".activity.MapActivity"
             />
+        <activity android:name=".activity.RecyclerViewActivity"/>
+        <activity android:name=".activity.ChatActivity"/>
     </application>
 
 </manifest>

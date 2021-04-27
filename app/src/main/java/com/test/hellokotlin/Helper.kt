@@ -36,4 +36,12 @@ fun jump2MapActivity(context: Context){
 fun  jump2RecyclerViewActivity(context: Context){
     context.startActivity(Intent(context,RecyclerViewActivity::class.java))
 
+
+}
+fun  jump2ChatActivity(context: Context){
+    context.startActivity(Intent(context,ChatActivity::class.java))
+}
+fun  jump2TestFragmentActivity(context: Context){
+    context.startActivity(Intent(context,TestFragmentActivity::class.java))
+
 }

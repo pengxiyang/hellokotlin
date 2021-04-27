@@ -38,8 +38,15 @@ class MainActivity : AppCompatActivity() {
         binding.btRv.setOnClickListener {
             jump2RecyclerViewActivity(this)
         }
+        binding.btChat.setOnClickListener {
+            jump2ChatActivity(this)
+        }
         binding.btMap.setOnClickListener {
             jump2MapTabActivity(this)
+        }
+        binding.btFragment.setOnClickListener {
+            jump2TestFragmentActivity(this)
+
         }
     }
     /**

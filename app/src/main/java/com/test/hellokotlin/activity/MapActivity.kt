@@ -63,7 +63,7 @@ class MapActivity : AppCompatActivity() {
     private fun setupMap() {
         // license with a license key
         ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud4449636536,none,NKMFA0PL4S0DRJE15166")
-        ArcGISRuntimeEnvironment.setApiKey(BuildConfig.API_KEY)
+        ArcGISRuntimeEnvironment.setApiKey("")
         val map = ArcGISMap(BasemapStyle.ARCGIS_TOPOGRAPHIC)
         mMapView.apply {
             this.map = map

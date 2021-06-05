@@ -41,8 +41,9 @@
         <activity android:name=".activity.RecyclerViewActivity"/>
         <activity android:name=".activity.ChatActivity"/>
         <activity android:name=".activity.TestFragmentActivity"/>
-        <activity android:name=".activity.RunningActivity"/>
-        <service android:name=".service.RunningService"
+        <activity android:name=".activity.RunningActivity">
+        </activity>
+        <service android:name=".service.MyService"
             android:exported="true"
             android:enabled="true"
             />

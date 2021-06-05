@@ -43,5 +43,9 @@ fun  jump2ChatActivity(context: Context){
 }
 fun  jump2TestFragmentActivity(context: Context){
     context.startActivity(Intent(context,TestFragmentActivity::class.java))
+}
+
+fun jumpToRunningActivity(context: Context){
+    context.startActivity(Intent(context,RunningActivity::class.java))
 
 }

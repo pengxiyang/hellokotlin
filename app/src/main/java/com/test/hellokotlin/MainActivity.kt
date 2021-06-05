@@ -48,6 +48,10 @@ class MainActivity : AppCompatActivity() {
             jump2TestFragmentActivity(this)
 
         }
+        binding.actServiceBt.setOnClickListener {
+            jumpToRunningActivity(this)
+
+        }
     }
     /**
      * 显示intent

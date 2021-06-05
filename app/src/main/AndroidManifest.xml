@@ -41,6 +41,11 @@
         <activity android:name=".activity.RecyclerViewActivity"/>
         <activity android:name=".activity.ChatActivity"/>
         <activity android:name=".activity.TestFragmentActivity"/>
+        <activity android:name=".activity.RunningActivity"/>
+        <service android:name=".service.RunningService"
+            android:exported="true"
+            android:enabled="true"
+            />
     </application>
 
 </manifest>

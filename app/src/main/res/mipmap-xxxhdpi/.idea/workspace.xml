@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1affbde2-86bf-44c5-b4ab-a8dc58425f31" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/utils/AnimUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/utils/ClickUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-xhdpi/marker_checked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-xxhdpi/marker_checked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/marker_checked.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../release/app-release.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/pipe/sh/app/ActivityLifecycleCallbacksImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/app/ActivityLifecycleCallbacksImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/pipe/sh/di/component/Maincomponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/di/component/Maincomponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/activity/EBaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/activity/EBaseActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/activity/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/activity/LoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/activity/MainActivity1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/activity/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/activity/MapCenterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/activity/MapCenterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/activity/start/WorkOrderDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/activity/start/WorkOrderDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/fragment/MapSelectFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/fragment/MapSelectFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/fragment/StartFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/mvp/ui/fragment/StartFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/pipe/sh/views/dialog/MyDialog1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/pipe/sh/views/dialog/MyDialog1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_map_center.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_work_order_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_work_order_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/dialog_safety_tips.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/dialog_safety_tips.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/fragment_start.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/fragment_start.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/include_title.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/include_title.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/item_tips.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/item_tips.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/t_toolbar_layout_fragment.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1pYRwuqSfYYpGgXWYx3GsFVETuk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../../../../../../Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1affbde2-86bf-44c5-b4ab-a8dc58425f31" name="Default Changelist" comment="" />
+      <created>1615358278740</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615358278740</updated>
+    </task>
+    <servers />
+  </component>
+</project>

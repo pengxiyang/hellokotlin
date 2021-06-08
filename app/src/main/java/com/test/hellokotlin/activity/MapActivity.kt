@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.esri.arcgisruntime.ArcGISRuntimeEnvironment
 import com.esri.arcgisruntime.geometry.PointCollection
 import com.esri.arcgisruntime.geometry.Polyline
-import com.esri.arcgisruntime.geometry.SpatialReferences
+
 import com.esri.arcgisruntime.mapping.ArcGISMap
 import com.esri.arcgisruntime.mapping.BasemapStyle
 import com.esri.arcgisruntime.mapping.Viewpoint
@@ -18,7 +18,7 @@ import com.esri.arcgisruntime.mapping.view.GraphicsOverlay
 import com.esri.arcgisruntime.mapping.view.MapView
 import com.esri.arcgisruntime.symbology.SimpleLineSymbol
 import com.esri.arcgisruntime.symbology.SimpleMarkerSymbol
-import com.test.hellokotlin.BuildConfig
+import com.test.hellokotlin.ARCGIS_APPKEY
 import com.test.hellokotlin.databinding.ActivityMapBinding
 import kotlin.math.roundToInt
 
@@ -63,7 +63,7 @@ class MapActivity : AppCompatActivity() {
     private fun setupMap() {
         // license with a license key
         ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud4449636536,none,NKMFA0PL4S0DRJE15166")
-        ArcGISRuntimeEnvironment.setApiKey("")
+        ArcGISRuntimeEnvironment.setApiKey(ARCGIS_APPKEY)
         val map = ArcGISMap(BasemapStyle.ARCGIS_TOPOGRAPHIC)
         mMapView.apply {
             this.map = map

@@ -37,6 +37,11 @@ class Fruit2Adapter(val list: List<Fruit>) : RecyclerView.Adapter<Fruit2Adapter.
         return viewHolder
     }
 
+
+
+//    val count:Int
+//    get() = list.size
+
     override fun getItemCount() = list?.size ?: 0
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

@@ -50,4 +50,5 @@ dependencies {
     implementation "com.esri.arcgisruntime:arcgis-android:$arcgisVersion"
     implementation "androidx.multidex:multidex:$multidexVersion"
     implementation 'com.roughike:bottom-bar:2.3.1'
+    implementation 'com.permissionx.guolindev:permissionx:1.4.0'
 }

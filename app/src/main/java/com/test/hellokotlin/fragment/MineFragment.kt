@@ -9,7 +9,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.permissionx.guolindev.PermissionX
 import com.test.hellokotlin.R
+import com.test.hellokotlin.StartActivityUtils
 import com.test.hellokotlin.databinding.FragmentMineBinding
+import com.test.hellokotlin.jumpToCameraActivity
+import com.test.hellokotlin.view.CustomDialog
 import java.util.jar.Manifest
 
 class MineFragment : Fragment(), View.OnClickListener {
@@ -29,7 +32,7 @@ class MineFragment : Fragment(), View.OnClickListener {
 
     private fun initData() {
         binding.cameraBt.setOnClickListener(this)
-        binding.photoBt.setOnClickListener(this)
+        binding.dialBt.setOnClickListener(this)
         binding.callBt.setOnClickListener(this)
 
     }
@@ -42,36 +45,45 @@ class MineFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.camera_bt -> {
-            }
-            R.id.photo_bt -> {
-            }
-            R.id.call_bt -> {
-                PermissionX.init(this)
-                    .permissions(android.Manifest.permission.CALL_PHONE)
-                    .onExplainRequestReason{ scope, deniedList ->
-
-
-                    }
-                    .request{ allGranted, grantedList, deniedList ->
-                        if(allGranted){
-                            call()
-                        }
-
-                    }
-
-            }
+            R.id.camera_bt -> jumpToCameraActivity(context)
+            R.id.dial_bt -> call(1)
+            R.id.call_bt -> requestCallPermission()
         }
+    }
+
+    /**
+     * 请求权限
+     */
+    fun requestCallPermission() {
+        PermissionX.init(this)
+            .permissions(android.Manifest.permission.CALL_PHONE)
+            .onExplainRequestReason { scope, deniedList ->
+                scope.showRequestReasonDialog(deniedList, "PermissionX需要您同意以下权限才能正常使用", "同意", "拒绝")
+            }
+            .onForwardToSettings { scope, deniedList ->
+                scope.showForwardToSettingsDialog(deniedList, "必要权限请授权，否则无法使用该功能", "同意", "拒绝")
+            }
+            .request { allGranted, grantedList, deniedList ->
+                if (allGranted) {
+                    call(2)
+                } else {
+
+                }
+            }
     }
 
     /**
      * 打电话
      */
-    fun call() {
+    fun call(type: Int) {
+        val intent: Intent
+        if (type == 1) {
+            intent = Intent(Intent.ACTION_DIAL)
+        } else {
+            intent = Intent(Intent.ACTION_CALL)
+        }
 
-        // val intent =Intent(Intent.ACTION_DIAL)
-        val intent =Intent(Intent.ACTION_CALL)
-        intent.data =Uri.parse("tel:18538190564")
+        intent.data = Uri.parse("tel:18538190564")
         startActivity(intent)
 
 

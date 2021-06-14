@@ -52,6 +52,16 @@
             android:exported="true"
             android:enabled="true"
             />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.test.hellokotlin.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
 
     </application>
 

@@ -17,5 +17,9 @@ class StartActivityUtils {
             intent.putExtra("param2",data2)
             cotext.startActivity(intent)
         }
+
+        fun test(){
+
+        }
     }
 }

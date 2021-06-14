@@ -52,5 +52,7 @@ fun jumpToRunningActivity(context: Context){
 
 fun jumpToMainActivity(context: Context?){
     context?.startActivity(Intent(context,MainActivity::class.java))
-
+}
+fun jumpToCameraActivity(context: Context?){
+    context?.startActivity(Intent(context,CameraActivity::class.java))
 }

@@ -48,6 +48,8 @@
         <activity android:name=".activity.CallActivity"/>
         <activity android:name=".activity.CameraActivity"/>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".activity.MediaPlayerActivity"/>
+        <activity android:name=".activity.VideoPlayerActivity"/>
         <service android:name=".service.MyService"
             android:exported="true"
             android:enabled="true"

@@ -9,11 +9,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.permissionx.guolindev.PermissionX
 import com.test.hellokotlin.R
-import com.test.hellokotlin.StartActivityUtils
 import com.test.hellokotlin.databinding.FragmentMineBinding
 import com.test.hellokotlin.jumpToCameraActivity
-import com.test.hellokotlin.view.CustomDialog
-import java.util.jar.Manifest
+import com.test.hellokotlin.jumpToMediaPlayerActivity
+import com.test.hellokotlin.jumpToVideoPlayerActivity
+
 
 class MineFragment : Fragment(), View.OnClickListener {
     private var _binding: FragmentMineBinding? = null
@@ -34,6 +34,8 @@ class MineFragment : Fragment(), View.OnClickListener {
         binding.cameraBt.setOnClickListener(this)
         binding.dialBt.setOnClickListener(this)
         binding.callBt.setOnClickListener(this)
+        binding.mediaPlayerBt.setOnClickListener(this)
+        binding.videoPlayerBt.setOnClickListener(this)
 
     }
 
@@ -48,6 +50,8 @@ class MineFragment : Fragment(), View.OnClickListener {
             R.id.camera_bt -> jumpToCameraActivity(context)
             R.id.dial_bt -> call(1)
             R.id.call_bt -> requestCallPermission()
+            R.id.media_player_bt -> jumpToMediaPlayerActivity(context)
+            R.id.video_player_bt-> jumpToVideoPlayerActivity(context)
         }
     }
 

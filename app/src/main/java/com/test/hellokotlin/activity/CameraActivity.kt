@@ -90,10 +90,20 @@ class CameraActivity : AppCompatActivity(), View.OnClickListener {
      * 相册
      */
     fun fromAlbum() {
-        val intent =Intent(Intent.ACTION_OPEN_DOCUMENT)
+        val intent = Intent(
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) Intent.ACTION_GET_CONTENT else Intent.ACTION_OPEN_DOCUMENT
+        )
         intent.addCategory(Intent.CATEGORY_OPENABLE)
+        intent.type = "image/*"
+        startActivityForResult(intent, fromAlbum)
+    }
+
+    fun  fromAlbum1(){
+        val intent =Intent(Intent.ACTION_PICK)
+        intent.data =MediaStore.Images.Media.EXTERNAL_CONTENT_URI
         intent.type ="image/*"
         startActivityForResult(intent,fromAlbum)
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -109,9 +119,9 @@ class CameraActivity : AppCompatActivity(), View.OnClickListener {
 
             }
             fromAlbum -> {
-                if(resultCode ==Activity.RESULT_OK&&data!=null){
+                if (resultCode == Activity.RESULT_OK && data != null) {
                     data.data?.let { uri ->
-                        val  bitmap =getBitmapFromUri(uri)
+                        val bitmap = getBitmapFromUri(uri)
                         binding.imageIv.setImageBitmap(bitmap)
 
                     }
@@ -145,17 +155,16 @@ class CameraActivity : AppCompatActivity(), View.OnClickListener {
         return rotatedBitmap
     }
 
-    private fun  getBitmapFromUri(uri: Uri) =contentResolver.openFileDescriptor(uri,"r")
+    private fun getBitmapFromUri(uri: Uri) = contentResolver.openFileDescriptor(uri, "r")
         ?.use {
             BitmapFactory.decodeFileDescriptor(it.fileDescriptor)
         }
 
 
-
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.camera_bt -> requestCameraPermission()
-            R.id.album_bt -> fromAlbum()
+            R.id.album_bt -> fromAlbum1()
 
         }
     }

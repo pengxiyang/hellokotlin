@@ -56,3 +56,9 @@ fun jumpToMainActivity(context: Context?){
 fun jumpToCameraActivity(context: Context?){
     context?.startActivity(Intent(context,CameraActivity::class.java))
 }
+fun jumpToMediaPlayerActivity(context: Context?){
+    context?.startActivity(Intent(context,MediaPlayerActivity::class.java))
+}
+fun jumpToVideoPlayerActivity(context: Context?){
+    context?.startActivity(Intent(context,VideoPlayerActivity::class.java))
+}

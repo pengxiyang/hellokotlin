@@ -3,35 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <Button
-        android:id="@+id/to_main_bt"
+
+    <TextView
+        android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="50dp"
-        android:text="跳转到MainActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="0"
         />
     <Button
-        android:id="@+id/view_model_bt"
+        android:id="@+id/bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/to_main_bt"
+        app:layout_constraintTop_toBottomOf="@id/tv"
+        android:text="点击"
         android:layout_marginTop="20dp"
-        android:text="跳转到ViewModel"
         />
     <Button
-        android:id="@+id/view_model2_bt"
+        android:id="@+id/bt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_model_bt"
+        app:layout_constraintTop_toBottomOf="@id/bt"
+        android:text="清零"
         android:layout_marginTop="20dp"
-        android:text="跳转到ViewModel2"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

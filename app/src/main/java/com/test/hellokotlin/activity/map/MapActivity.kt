@@ -1,4 +1,4 @@
-package com.test.hellokotlin.activity
+package com.test.hellokotlin.activity.map
 
 import android.graphics.Point
 import android.os.Bundle

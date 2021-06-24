@@ -3,16 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView
-        android:id="@+id/main_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+   <Button
+       android:id="@+id/permission_bt"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textSize="16sp"
-        android:text="MainFragment"
-        />
+       android:layout_marginTop="50dp"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       android:text="Permission"
+       />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

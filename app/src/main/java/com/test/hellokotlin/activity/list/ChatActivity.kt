@@ -1,4 +1,4 @@
-package com.test.hellokotlin.activity
+package com.test.hellokotlin.activity.list
 
 import android.os.Bundle
 import android.view.View

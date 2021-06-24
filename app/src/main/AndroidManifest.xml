@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.test.hellokotlin">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!--精确定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!--网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/> <!--后台定位-->
 
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,19 +43,23 @@
             android:theme="@style/Theme.AppCompat.Dialog"
             ></activity>
         <activity android:name=".activity.AlertDialogActivity"/>
-        <activity android:name=".activity.ListViewActivity"/>
-        <activity android:name=".activity.MapTabActivity"/>
-        <activity android:name=".activity.MapActivity"
+        <activity android:name=".activity.list.ListViewActivity"/>
+        <activity android:name=".activity.map.MapTabActivity"/>
+        <activity android:name=".activity.map.MapActivity"
             />
-        <activity android:name=".activity.RecyclerViewActivity"/>
-        <activity android:name=".activity.ChatActivity"/>
+        <activity android:name=".activity.list.RecyclerViewActivity"/>
+        <activity android:name=".activity.list.ChatActivity"/>
         <activity android:name=".activity.TestFragmentActivity"/>
         <activity android:name=".activity.RunningActivity"/>
-        <activity android:name=".activity.CallActivity"/>
-        <activity android:name=".activity.CameraActivity"/>
+        <activity android:name=".activity.media.CallActivity"/>
+        <activity android:name=".activity.media.CameraActivity"/>
         <activity android:name=".MainActivity"/>
-        <activity android:name=".activity.MediaPlayerActivity"/>
-        <activity android:name=".activity.VideoPlayerActivity"/>
+        <activity android:name=".activity.media.MediaPlayerActivity"/>
+        <activity android:name=".activity.media.VideoPlayerActivity"/>
+        <activity android:name=".activity.permission.PermissionActivity"/>
+        <activity android:name=".activity.jetpack.ViewModelActivity"/>
+        <activity android:name=".activity.jetpack.ViewModel2Activity"/>
+
         <service android:name=".service.MyService"
             android:exported="true"
             android:enabled="true"

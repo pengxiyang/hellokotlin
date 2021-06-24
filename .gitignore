@@ -20,3 +20,5 @@ local.properties
 /.idea/misc.xml
 /.idea/vcs.xml
 /.idea/runConfigurations.xml
+/hs_err_pid7320.log
+/replay_pid7320.log

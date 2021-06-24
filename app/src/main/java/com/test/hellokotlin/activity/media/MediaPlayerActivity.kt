@@ -1,4 +1,4 @@
-package com.test.hellokotlin.activity
+package com.test.hellokotlin.activity.media
 
 import android.media.MediaPlayer
 import android.os.Bundle

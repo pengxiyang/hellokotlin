@@ -1,6 +1,7 @@
-package com.test.hellokotlin.activity
+package com.test.hellokotlin.activity.media
 
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast

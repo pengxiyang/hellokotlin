@@ -1,4 +1,4 @@
-package com.test.hellokotlin.activity
+package com.test.hellokotlin.activity.map
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.test.hellokotlin.activity
+package com.test.hellokotlin.activity.media
 
 import android.app.Activity
 import android.content.Intent
@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import com.permissionx.guolindev.PermissionX
 import com.test.hellokotlin.R
-import com.test.hellokotlin.databinding.ActivityCallBinding
 import com.test.hellokotlin.databinding.ActivityCameraBinding
 import java.io.File
 

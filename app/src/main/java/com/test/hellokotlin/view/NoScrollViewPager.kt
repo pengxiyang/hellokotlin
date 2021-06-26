@@ -1,29 +1,22 @@
-package com.test.hellokotlin.view;
+package com.test.hellokotlin.view
 
-import android.content.Context;
-import android.util.AttributeSet;
-import android.view.MotionEvent;
-
-import androidx.viewpager.widget.ViewPager;
+import android.content.Context
+import androidx.viewpager.widget.ViewPager
+import android.util.AttributeSet
+import android.view.MotionEvent
 
 /*
  *自定义不会滑动的viewpager
  **/
-public class NoScrollViewPager extends ViewPager {
-    public NoScrollViewPager(Context context) {
-        super(context);
-    }
-    public NoScrollViewPager(Context context, AttributeSet attrs) {
-        super(context, attrs);
+class NoScrollViewPager : ViewPager {
+    constructor(context: Context?) : super(context!!) {}
+    constructor(context: Context?, attrs: AttributeSet?) : super(context!!, attrs) {}
+
+    override fun onTouchEvent(arg0: MotionEvent): Boolean {
+        return false
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent arg0) {
-        return false;
-    }
-
-    @Override
-    public boolean onInterceptTouchEvent(MotionEvent arg0) {
-        return false;
+    override fun onInterceptTouchEvent(arg0: MotionEvent): Boolean {
+        return false
     }
 }

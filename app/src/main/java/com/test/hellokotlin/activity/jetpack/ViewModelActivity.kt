@@ -11,7 +11,7 @@ import com.test.hellokotlin.R
 import com.test.hellokotlin.databinding.ActivityViewModelBinding
 import com.test.hellokotlin.lifecycle.MyObserver
 import com.test.hellokotlin.viewmodel.MainViewModel
-import com.test.hellokotlin.viewmodel.MainViewModelFactory
+import com.test.hellokotlin.factory.MainViewModelFactory
 
 class ViewModelActivity :AppCompatActivity(),View.OnClickListener{
 
@@ -31,7 +31,7 @@ class ViewModelActivity :AppCompatActivity(),View.OnClickListener{
         sp=getPreferences(Context.MODE_PRIVATE)
        // viewModel =ViewModelProvider(this).get(MainViewModel::class.java)
         val countReserved =sp.getInt("count_reserved",0)
-        viewModel =ViewModelProvider(this,MainViewModelFactory(countReserved)).get(MainViewModel::class.java)
+        viewModel =ViewModelProvider(this, MainViewModelFactory(countReserved)).get(MainViewModel::class.java)
         binding.bt.setOnClickListener {
             viewModel.counter++
             refreshCounter()

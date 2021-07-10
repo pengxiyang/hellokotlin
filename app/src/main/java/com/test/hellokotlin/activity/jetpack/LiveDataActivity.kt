@@ -10,14 +10,14 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import com.test.hellokotlin.R
 import com.test.hellokotlin.databinding.ActivityViewModelBinding
-import com.test.hellokotlin.viewmodel.Main2ViewModel
-import com.test.hellokotlin.factory.Main2ViewModelFactory
+import com.test.hellokotlin.viewmodel.LiveDataModel
+import com.test.hellokotlin.factory.LiveDataModelFactory
 
 
-class ViewModel2Activity : AppCompatActivity(), View.OnClickListener {
+class LiveDataActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityViewModelBinding
-    lateinit var viewModel: Main2ViewModel
+    lateinit var viewModel: LiveDataModel
     lateinit var sp: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +32,8 @@ class ViewModel2Activity : AppCompatActivity(), View.OnClickListener {
         val countReserved = sp.getInt("count_reserved", 0)
         viewModel = ViewModelProvider(
             this,
-            Main2ViewModelFactory(countReserved)
-        ).get(Main2ViewModel::class.java)
+            LiveDataModelFactory(countReserved)
+        ).get(LiveDataModel::class.java)
         binding.bt.setOnClickListener {
             viewModel.plusOne()
         }

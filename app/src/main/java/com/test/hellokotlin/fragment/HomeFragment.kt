@@ -5,13 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.test.hellokotlin.*
+import com.test.hellokotlin.activity.HandlerActivity
+import com.test.hellokotlin.activity.MaterialDesign2Activity
+import com.test.hellokotlin.activity.MaterialDesignActivity
+import com.test.hellokotlin.activity.jetpack.LiveDataActivity
+import com.test.hellokotlin.activity.jetpack.ViewModel2Activity
+import com.test.hellokotlin.activity.jetpack.ViewModelActivity
 import com.test.hellokotlin.databinding.FragmentHomeBinding
-import com.test.hellokotlin.jumpToMainActivity
-import com.test.hellokotlin.jumpToViewModel2Activity
-import com.test.hellokotlin.jumpToViewModelActivity
 import com.test.hellokotlin.utils.StartActivityUtils
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment() ,View.OnClickListener{
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -27,23 +31,49 @@ class HomeFragment : Fragment() {
     }
 
     private fun initData() {
-        binding.toMainBt.setOnClickListener {
-            StartActivityUtils.jump2MainActivity(binding.root.context)
-//         StartActivityUtils.jump2MainActivity(context)
-//         jumpToMainActivity(context)
+        binding.apply {
+            toMainBt.setOnClickListener(this@HomeFragment)
+            viewModelBt.setOnClickListener(this@HomeFragment)
+            viewModel2Bt.setOnClickListener(this@HomeFragment)
+            liveDataBt.setOnClickListener(this@HomeFragment)
+            handlerBt.setOnClickListener(this@HomeFragment)
+            materialBt.setOnClickListener(this@HomeFragment)
+            material2Bt.setOnClickListener(this@HomeFragment)
+        }
+//
+//        binding.toMainBt.setOnClickListener {
+//            StartActivityUtils.jump2MainActivity(binding.root.context)
+////         StartActivityUtils.jump2MainActivity(context)
+////         jumpToMainActivity(context)
+//
+//        }
+
+    }
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.handler_bt->{
+                jumpToActivity(context,HandlerActivity::class.java)
+            }
+            R.id.material_bt->{
+                jumpToActivity(context,MaterialDesignActivity::class.java)
+            }
+            R.id.to_main_bt-> StartActivityUtils.jump2MainActivity(binding.root.context)
+            R.id.view_model_bt-> jumpToActivity(context,ViewModelActivity::class.java)
+            R.id.view_model2_bt-> jumpToActivity(context,ViewModel2Activity::class.java)
+            R.id.live_data_bt-> jumpToActivity(context,LiveDataActivity::class.java)
+            R.id.material2_bt-> jumpToActivity(context,MaterialDesign2Activity::class.java)
+
+
+
 
         }
-        binding.viewModelBt.setOnClickListener {
-            jumpToViewModelActivity(context)
-        }
-        binding.viewModel2Bt.setOnClickListener {
-            jumpToViewModel2Activity(context)
-        }
     }
+
 
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }

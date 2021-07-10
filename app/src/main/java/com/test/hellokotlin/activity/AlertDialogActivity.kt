@@ -13,6 +13,7 @@ import com.test.hellokotlin.databinding.ActivityDialogBinding
 class AlertDialogActivity :AppCompatActivity() {
     private lateinit var binding: ActivityAlertDialogBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAlertDialogBinding.inflate(layoutInflater)

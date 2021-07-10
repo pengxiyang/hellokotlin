@@ -92,3 +92,11 @@ fun  jumpToViewModelActivity(context: Context?){
 fun  jumpToViewModel2Activity(context: Context?){
     context?.startActivity(Intent(context, ViewModel2Activity::class.java))
 }
+
+/**
+ * 通用Activity跳转方法
+ */
+fun  jumpToActivity(context: Context?,clazz:Class<*>){
+    context?.startActivity(Intent(context,clazz))
+
+}

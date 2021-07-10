@@ -1,6 +1,7 @@
 package com.test.hellokotlin.test.lambda
 
 import com.test.hellokotlin.test.obj.Study
+import kotlin.concurrent.thread
 
 /**
  *  created by pxy on 2021/4/21
@@ -71,6 +72,15 @@ class classApi {
         Thread({
             println("12")
         }).start()
+
+        Thread{
+
+        }.start()
+
+        //kotlin提供的更简洁的写法
+        thread {
+
+        }
     }
 
     /**

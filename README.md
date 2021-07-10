@@ -9,3 +9,5 @@ kotlin demo
 7.fragment。
 8.activity和service。
 9.简单的音频和视频播放（mediaPlayer和VideoView）
+10.viewmodel+lifecycle +livedata的简单使用。
+11.MaterialDesign控件，如Toolbar、CoordinatorLayout、AppBarLayout、NavigationView、FloatingActionButton

@@ -61,7 +61,9 @@ class HomeFragment : Fragment() ,View.OnClickListener{
             R.id.view_model_bt-> jumpToActivity(context,ViewModelActivity::class.java)
             R.id.view_model2_bt-> jumpToActivity(context,ViewModel2Activity::class.java)
             R.id.live_data_bt-> jumpToActivity(context,LiveDataActivity::class.java)
-            R.id.material2_bt-> jumpToActivity(context,MaterialDesign2Activity::class.java)
+            R.id.material2_bt-> {
+
+            }
 
 
 

@@ -21,7 +21,7 @@ class VideoPlayerActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun initVideo() {
-        val uri = Uri.parse("android.resource://$packageName/${R.raw.video}")
+        val uri = Uri.parse("android.resource://$packageName/${R.raw.test}")
         videoView.setVideoURI(uri)//设置播放视频文件的uri
         binding.play.setOnClickListener(this)
         binding.pause.setOnClickListener(this)

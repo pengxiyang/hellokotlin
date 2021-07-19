@@ -8,10 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import com.test.hellokotlin.MyApplcation
 import com.test.hellokotlin.R
 import com.test.hellokotlin.adapter.NewFruitAdapter
 import com.test.hellokotlin.bean.Fruit
 import com.test.hellokotlin.databinding.MaterialDesignActivityBinding
+import com.test.hellokotlin.utils.showSnackbarN
+import com.test.hellokotlin.utils.showSnackbarNew
+import com.test.hellokotlin.utils.showToast
 import kotlin.concurrent.thread
 
 class MaterialDesignActivity : AppCompatActivity() {
@@ -37,11 +41,17 @@ class MaterialDesignActivity : AppCompatActivity() {
 
     private val fruitList = ArrayList<Fruit>()
 
+    override fun onDestroy() {
+        super.onDestroy()
+        MyApplcation.destoryActivity("1")
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MaterialDesignActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        MyApplcation.addDestoryActivity(this,"1")
         initFruits()
         binding.apply {
             setSupportActionBar(toolbar)
@@ -53,16 +63,16 @@ class MaterialDesignActivity : AppCompatActivity() {
             }
 
             fab.setOnClickListener { view ->
-                //   Toast.makeText(this@MaterialDesignActivity,"Fab",Toast.LENGTH_SHORT).show()
-                Snackbar.make(view, "Data fab", Snackbar.LENGTH_SHORT)
-                    .setAction("Undo") {
-                        Toast.makeText(
-                            this@MaterialDesignActivity,
-                            "Data restored",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                    .show()
+//                Snackbar.make(view, "Data fab", Snackbar.LENGTH_SHORT)
+//                    .setAction("Undo") {
+//                        "Data restored".showToast(this@MaterialDesignActivity)
+//                    }
+//                    .show()
+
+                view.showSnackbarN("Data fab","Undo"){
+                    "Data restored".showToast(this@MaterialDesignActivity)
+
+                }
 
             }
         }

@@ -12,6 +12,8 @@ import com.test.hellokotlin.activity.MaterialDesignActivity
 import com.test.hellokotlin.activity.jetpack.LiveDataActivity
 import com.test.hellokotlin.activity.jetpack.ViewModel2Activity
 import com.test.hellokotlin.activity.jetpack.ViewModelActivity
+import com.test.hellokotlin.activity.net.NetActivity
+import com.test.hellokotlin.activity.web.WebActivity
 import com.test.hellokotlin.databinding.FragmentHomeBinding
 import com.test.hellokotlin.utils.StartActivityUtils
 
@@ -39,6 +41,7 @@ class HomeFragment : Fragment() ,View.OnClickListener{
             handlerBt.setOnClickListener(this@HomeFragment)
             materialBt.setOnClickListener(this@HomeFragment)
             material2Bt.setOnClickListener(this@HomeFragment)
+            httpBt.setOnClickListener(this@HomeFragment)
         }
 //
 //        binding.toMainBt.setOnClickListener {
@@ -62,11 +65,9 @@ class HomeFragment : Fragment() ,View.OnClickListener{
             R.id.view_model2_bt-> jumpToActivity(context,ViewModel2Activity::class.java)
             R.id.live_data_bt-> jumpToActivity(context,LiveDataActivity::class.java)
             R.id.material2_bt-> {
-
+                jumpToActivity(context,WebActivity::class.java)
             }
-
-
-
+            R.id.http_bt-> jumpToActivity(context,NetActivity::class.java)
 
         }
     }

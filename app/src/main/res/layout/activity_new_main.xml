@@ -9,7 +9,7 @@
         app:bb_tabXmlResource="@xml/bottombar_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_height="60dp"/>
-  <com.test.hellokotlin.view.NoScrollViewPager
+  <com.test.hellokotlin.android.view.NoScrollViewPager
       android:id="@+id/noscroll_vp"
       android:layout_width="match_parent"
       android:layout_height="0dp"

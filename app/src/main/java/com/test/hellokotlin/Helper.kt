@@ -2,18 +2,18 @@ package com.test.hellokotlin
 
 import android.content.Context
 import android.content.Intent
-import com.test.hellokotlin.activity.*
-import com.test.hellokotlin.activity.jetpack.ViewModel2Activity
-import com.test.hellokotlin.activity.jetpack.ViewModelActivity
-import com.test.hellokotlin.activity.list.ChatActivity
-import com.test.hellokotlin.activity.list.ListViewActivity
-import com.test.hellokotlin.activity.list.RecyclerViewActivity
-import com.test.hellokotlin.activity.map.MapActivity
-import com.test.hellokotlin.activity.map.MapTabActivity
-import com.test.hellokotlin.activity.media.CameraActivity
-import com.test.hellokotlin.activity.media.MediaPlayerActivity
-import com.test.hellokotlin.activity.media.VideoPlayerActivity
-import com.test.hellokotlin.activity.permission.PermissionActivity
+import com.test.hellokotlin.android.activity.*
+import com.test.hellokotlin.android.activity.jetpack.ViewModel2Activity
+import com.test.hellokotlin.android.activity.jetpack.ViewModelActivity
+import com.test.hellokotlin.android.activity.list.ChatActivity
+import com.test.hellokotlin.android.activity.list.ListViewActivity
+import com.test.hellokotlin.android.activity.list.RecyclerViewActivity
+import com.test.hellokotlin.android.activity.map.MapActivity
+import com.test.hellokotlin.android.activity.map.MapTabActivity
+import com.test.hellokotlin.android.activity.media.CameraActivity
+import com.test.hellokotlin.android.activity.media.MediaPlayerActivity
+import com.test.hellokotlin.android.activity.media.VideoPlayerActivity
+import com.test.hellokotlin.android.activity.permission.PermissionActivity
 
 var ARCGIS_APPKEY = "AAPK678cc7aef3d34d09a44a390f17cdf3e7-6rAoyy0PGvNoNeffCJ2rmmjbbZSqAsgJbyAz6e_0nsh9zgzJzHdhi4AIPSHNXru"
 

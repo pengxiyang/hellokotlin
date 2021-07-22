@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
     <fragment
         android:id="@+id/left_frag"
-        android:name="com.test.hellokotlin.fragment.LeftFragment"
+        android:name="com.test.hellokotlin.android.fragment.LeftFragment"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"/>

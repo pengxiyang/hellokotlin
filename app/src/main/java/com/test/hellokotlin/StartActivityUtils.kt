@@ -2,7 +2,7 @@ package com.test.hellokotlin
 
 import android.content.Context
 import android.content.Intent
-import com.test.hellokotlin.activity.SecondActivity
+import com.test.hellokotlin.android.activity.SecondActivity
 
 /**
  *  created by pxy on 2021/4/23

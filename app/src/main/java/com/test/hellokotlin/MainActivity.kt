@@ -4,8 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.test.hellokotlin.activity.DialogActivity
-import com.test.hellokotlin.activity.SecondActivity
+import com.test.hellokotlin.android.activity.DialogActivity
+import com.test.hellokotlin.android.activity.SecondActivity
 import com.test.hellokotlin.databinding.ActivityMainBinding
 
 /**

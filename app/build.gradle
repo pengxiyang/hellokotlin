@@ -8,10 +8,13 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
+
+        applicationId "com.test.hellokotlin"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
+
         multiDexEnabled true
       //  buildConfigField("String", "API_KEY", API_KEY)
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -65,5 +68,7 @@ dependencies {
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
 
 }

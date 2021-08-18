@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import com.test.hellokotlin.*
 import com.test.hellokotlin.android.activity.HandlerActivity
 import com.test.hellokotlin.android.activity.MaterialDesignActivity
+import com.test.hellokotlin.android.activity.TestActivity
+import com.test.hellokotlin.android.activity.file.FileActivity
 import com.test.hellokotlin.android.activity.jetpack.LiveDataActivity
 import com.test.hellokotlin.android.activity.jetpack.ViewModel2Activity
 import com.test.hellokotlin.android.activity.jetpack.ViewModelActivity
@@ -41,6 +43,8 @@ class HomeFragment : Fragment() ,View.OnClickListener{
             materialBt.setOnClickListener(this@HomeFragment)
             material2Bt.setOnClickListener(this@HomeFragment)
             httpBt.setOnClickListener(this@HomeFragment)
+            testBt.setOnClickListener(this@HomeFragment)
+            fileBt.setOnClickListener(this@HomeFragment)
         }
 //
 //        binding.toMainBt.setOnClickListener {
@@ -67,6 +71,9 @@ class HomeFragment : Fragment() ,View.OnClickListener{
                 jumpToActivity(context,WebActivity::class.java)
             }
             R.id.http_bt-> jumpToActivity(context,NetActivity::class.java)
+            R.id.test_bt-> jumpToActivity(context,TestActivity::class.java)
+
+            R.id.file_bt-> jumpToActivity(context,FileActivity::class.java)
 
         }
     }

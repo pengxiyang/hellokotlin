@@ -70,6 +70,8 @@
             />
         <activity android:name="com.test.hellokotlin.android.activity.web.WebActivity"/>
         <activity android:name="com.test.hellokotlin.android.activity.net.NetActivity"/>
+        <activity android:name=".android.activity.TestActivity"/>
+        <activity android:name=".android.activity.file.FileActivity"/>
 
         <service android:name="com.test.hellokotlin.android.service.MyService"
             android:exported="true"

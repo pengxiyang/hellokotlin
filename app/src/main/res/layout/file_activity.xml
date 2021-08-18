@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorAccent"
+        android:fitsSystemWindows="true"
+        />
+    <Button
+        android:id="@+id/load_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="5dp"
+        android:text="加载"
+        />
+
+    <Button
+        android:id="@+id/input_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@id/toolbar"
+       app:layout_constraintRight_toLeftOf="@id/load_bt"
+        android:layout_marginRight="10dp"
+        android:text="提交"
+        />
+
+    <EditText
+        android:id="@+id/input_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:hint="请输入..."
+        android:layout_marginRight="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/input_bt"
+        />
+    <Button
+        android:id="@+id/save_sp_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/input_et"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="保存共享文件"
+        />
+    <TextView
+        android:id="@+id/sp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/save_sp_bt"
+        />
+    <Button
+        android:id="@+id/restore_sp_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sp_tv"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="获取共享文件"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

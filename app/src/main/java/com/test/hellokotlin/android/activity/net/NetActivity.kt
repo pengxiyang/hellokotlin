@@ -70,7 +70,7 @@ class NetActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun  sendHttpRequest(){
-        val  url ="http://192.168.1.205:88/test.json"
+        val  url ="http://192.168.1.118:88/test.json"
         HttpUtil.sendHttpRequest(url,object :HttpCallbackListener{
             override fun onFinish(response: String) {
 
@@ -84,7 +84,7 @@ class NetActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun sendOkHttpRequest(){
-        val  url ="http://192.168.1.205:88/test.json"
+        val  url ="http://192.168.1.118:88/test.json"
         HttpUtil.sendOkHttpRequest(url,object :Callback{
             override fun onFailure(call: Call, e: IOException) {
                 //都是子线程
@@ -100,7 +100,7 @@ class NetActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun  sendRetrofitRequest(){
-        val  url ="http://192.168.1.205:88/"
+        val  url ="http://192.168.1.118:88/"
         val  retofit =Retrofit.Builder()
             .baseUrl(url)
             .addConverterFactory(GsonConverterFactory.create())

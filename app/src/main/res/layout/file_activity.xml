@@ -69,6 +69,61 @@
         android:layout_marginRight="50dp"
         android:text="获取共享文件"
         />
+    <Button
+        android:id="@+id/create_db_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/restore_sp_bt"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="创建数据库"
+        />
+    <Button
+        android:id="@+id/add_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/create_db_bt"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="增加数据"
+        />
+    <Button
+        android:id="@+id/modify_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/add_bt"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="修改数据"
+        />
+    <Button
+        android:id="@+id/delete_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/modify_bt"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="删除数据"
+        />
+    <Button
+        android:id="@+id/query_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/delete_bt"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="查找"
+        />
+    <Button
+        android:id="@+id/query2_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/query_bt"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="查找2"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

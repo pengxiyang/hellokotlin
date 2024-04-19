@@ -16,7 +16,7 @@ import com.test.hellokotlin.jumpToPermissionActivity
 class MainFragment:Fragment() {
     private var _binding: FragmentMainBinding?=null
     private val  binding get() = _binding!!
-    lateinit var  timeChangeReceiver: TimeChangeReceiver
+    private lateinit var  timeChangeReceiver: TimeChangeReceiver
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,8 +33,6 @@ class MainFragment:Fragment() {
       binding.permissionBt.setOnClickListener {
           jumpToPermissionActivity(context)
       }
-
-
     }
 
     private fun initData() {
@@ -52,7 +50,7 @@ class MainFragment:Fragment() {
 
     inner  class  TimeChangeReceiver :BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
-           Toast.makeText(context,"Time has change",Toast.LENGTH_SHORT).show()
+          // Toast.makeText(context,"Time has change",Toast.LENGTH_SHORT).show()
         }
 
     }

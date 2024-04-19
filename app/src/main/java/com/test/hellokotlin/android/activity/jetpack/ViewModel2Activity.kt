@@ -29,7 +29,7 @@ class ViewModel2Activity : AppCompatActivity(), View.OnClickListener {
 
     private fun init() {
         sp = getPreferences(Context.MODE_PRIVATE)
-        val countReserved = sp.getInt("count_reserved", 0)
+        val countReserved =   sp.getInt("count_reserved", 0)
         viewModel = ViewModelProvider(
             this,
             Main2ViewModelFactory(countReserved)

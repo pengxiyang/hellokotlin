@@ -16,8 +16,8 @@ import com.test.hellokotlin.android.factory.MainViewModelFactory
 class ViewModelActivity :AppCompatActivity(),View.OnClickListener{
 
     private lateinit var  binding :ActivityViewModelBinding
-    lateinit var viewModel: MainViewModel
-    lateinit var sp:SharedPreferences
+    private lateinit var viewModel: MainViewModel
+    private lateinit var sp:SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

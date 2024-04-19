@@ -5,24 +5,16 @@ import kotlinx.coroutines.*
 /**
  * 协程
  */
-class CoroutinesTest {
-
-    companion object{
-        @JvmStatic
-        fun main(args: Array<String>) {
-            val  co =CoroutinesTest()
-          //  co.main()
-            co.main1()
-            co.main2()
-            co.main3()
-            co.main4()
-            co.main5()
 
 
-        }
+fun  main() :Unit= runBlocking {
+    launch(CoroutineName("coroutine1")) {
+        println(coroutineContext.get(CoroutineName).toString())
     }
+}
 
-    fun  main(){
+
+    fun  main11(){
         //每次创建一个顶层携程
         GlobalScope.launch {
             println("codes run in coroutine scope")
@@ -97,5 +89,4 @@ class CoroutinesTest {
         }
         println("runBlocking finished")
     }
-}
 

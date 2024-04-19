@@ -24,7 +24,7 @@ var ARCGIS_APPKEY = "AAPK678cc7aef3d34d09a44a390f17cdf3e7-6rAoyy0PGvNoNeffCJ2rmm
  */
 
  fun  doSomething(){
-    println("do soemthing")
+    println("do something")
 }
 
 fun  jump2AlertDialogActivity(context:Context){
